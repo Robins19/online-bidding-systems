@@ -1,0 +1,124 @@
+$container-width: 100vw;
+$container-height: 100vh;
+$field-text-color: #a7a7a7;
+
+.login-container {
+  width: $container-width;
+  height: $container-height;
+  display: flex;
+}
+
+.field-text {
+  font-size: 5px;
+  color: $field-text-color;
+}
+
+.login-container-content {
+
+  flex: 50%;
+  //   background: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+
+
+}
+
+.login-form-items {
+  width: 50%;
+  background: #fff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #dedede;
+  box-shadow: 0 1px 0px #dedede;
+}
+
+.login-container-img {
+  flex: 50%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: url('https://i.picsum.photos/id/790/640/480.jpg?hmac=36IMkSyZ2xG_tyQHUuwXSuGHOHgBHLuzD3_9rHM3SSk');
+  background-size: cover;
+
+
+  &>h1 {
+    display: grid;
+    text-align: center;
+    color: white;
+    margin-top: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+
+    &>span {
+      text-align: center;
+
+    }
+  }
+}
+
+.container {
+  box-shadow: 0 0 15px 5px;
+  border-radius: 15px;
+}
+
+
+.mailinput mat-form-field {
+  width: 100%;
+}
+
+.mailinput {
+  text-align: left;
+}
+
+.mailinput mat-label {
+  color: #7d7d7d !important;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mailinput input {
+  width: 94%;
+}
+
+.mailinput input {
+  padding: 16px 0 11px 8px !important;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-wrapper {
+  position: absolute;
+  top: 12px;
+  right: 5px;
+  color: #33BFDB;
+  cursor: pointer;
+}
+
+.password-icon {
+  font-size: 22px;
+}
+
+.sign button {
+  text-decoration: none;
+  background: #A2C3BC;
+  padding: 0px 35px;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.heading-wrapper {
+  margin: 0 0 10px 0;
+  color: #7d7d7d !important;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0px 0 10px 0;
+}

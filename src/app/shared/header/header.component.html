@@ -1,0 +1,45 @@
+<div class="menufixbar">
+  <div class="menubar">
+    <div class="menuicon" [routerLink]="['/dashboard']">
+      <div class="clientname">
+        <a><img src="assets/images/icon.png"></a>
+      </div>
+    </div>
+    <div class="logo">
+      <div class="logohead-img" (click)="openLogoutDialog()">
+        <a class="login">
+          <span class="material-icons">
+            power_settings_new
+          </span>
+        </a>
+      </div>
+      <div class="user-image-wrapper clientname">
+        <img src="assets/images/member.png" class="user-image">
+
+      </div>
+      <div>
+        {{logedInUserName}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- logout modal -->
+
+<ng-template #callAPIDialog>
+  <div class="parent-wrapper">
+    <h2 matDialogTitle class="add-folder-title">Logout</h2>
+
+    <mat-dialog-content>
+      <div class="delete-message">
+        Are you sure you want to Logout?
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end" class="noyes">
+      <button class="yes" mat-button (click)="logout()">Yes</button>
+      <button class="no" mat-button (click)="onNoClick()">No</button>
+    </mat-dialog-actions>
+  </div>
+</ng-template>

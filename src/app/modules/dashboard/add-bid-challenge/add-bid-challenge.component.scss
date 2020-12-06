@@ -1,0 +1,391 @@
+/*-------------------------------------prescription start---------------------------------*/
+.headermenu {
+  padding-top: 71px;
+  width: 100%;
+  margin: 0 !important;
+}
+
+.medic-img img {
+  width: 100%;
+  height: 240px;
+}
+
+.plus img {
+  background: #33BFDB;
+  width: 20px;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.prescription {
+  /* width: 50%;
+        background: #fff;
+        box-shadow: 0 5px 5px #ccc, 0 5px 5px #000; */
+  margin: 0 auto 30px auto;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.signfirst input {
+  border: 1px solid #c3c3c3;
+  padding: 6px 2px;
+  width: 53%;
+  float: right;
+  margin: -7px 0 0 0;
+}
+
+.signfirst {
+  margin: 0 0 21px 0;
+}
+
+.signfirst mat-label {
+  color: #7d7d7d;
+  font-size: 14px;
+}
+
+.addtym h1 {
+  text-align: center;
+  font-size: 20px;
+  color: #7d7d7d;
+  font-weight: 500;
+  margin-bottom: 25px;
+  margin-top: 40px;
+}
+
+.signfirstdose {
+  width: 50%;
+  margin: 0 auto 21px auto !important;
+}
+
+.signfirstdose input {
+  border: 1px solid #c3c3c3;
+  padding: 6px 0;
+  width: 80%;
+  float: right;
+  margin: -7px 0 0 0;
+}
+
+.signfirstwarring mat-label {
+  color: #7d7d7d;
+  font-size: 14px;
+}
+
+.signfirstwarring mat-form-field {
+  width: 54.5%;
+  float: right;
+}
+
+.uploadfile {
+  text-align: right;
+}
+
+.uploadfile input {
+  width: 50% !important;
+  float: right;
+  padding: 0 !important;
+  margin: 0 0 6px 0;
+  border: none !important;
+}
+
+.uploadpht {
+  width: 48%;
+  float: left;
+  margin: 0 0 6px 0;
+}
+
+:focus {
+  outline: unset !important;
+}
+
+.save {
+  text-align: right;
+  margin: 10px 0 0px 0;
+}
+
+.save a {
+  text-decoration: none;
+  background: #dedede;
+  padding: 7px 36px;
+  color: #7d7d7d;
+  box-shadow: 5px 5px 5px #ccc, 5px 5px 5px #000;
+}
+
+.signfirst mat-form-field {
+  float: right;
+  width: 53%;
+}
+
+.prescription h1 {
+  font-size: 21px;
+  font-weight: 500;
+  color: #A2C3BC;
+  padding: 11px 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  width: 70%;
+  margin: 0;
+}
+
+.newprescptn {
+  display: flex;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 10px;
+}
+
+.uploadphoto mat-label {
+  font-size: 14px;
+  color: #A2C3BC;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.uploadfile mat-label {
+  font-size: 14px;
+  color: #A2C3BC;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.signfirst.startdate input {
+  margin: 0 0 0 0;
+}
+
+.signfirstwarring {
+  margin: 24px 0 21px 0;
+}
+
+.signfirst.enddate input {
+  margin: 7px 0 0 0;
+}
+
+.signfirst.enddate {
+  margin: 0px 0 15px 0;
+}
+
+.signfirst.startdate {
+  margin: 0 0 0 0;
+}
+
+.signfirst.numbr {
+  margin: 30px 0 28px 0;
+}
+
+.signfirst.numbr input {
+  margin: -9px 0 14px 0 !important;
+}
+
+.save button {
+  background: #33BFDB !important;
+  margin: 15px 0 0 0;
+}
+
+.mat-drawer-inner-container {
+  width: 670px;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.closemain {
+  width: 30%;
+}
+
+.close {
+  float: right;
+  color: #A2C3BC;
+  opacity: 10;
+  height: 25px;
+  width: 25px;
+  border: 1px solid;
+  border-radius: 50px;
+}
+
+.close span {
+  font-size: 20px;
+  margin: 3px 0 0 3px;
+  cursor: pointer;
+}
+
+.close {
+  float: right;
+  color: #A2C3BC;
+  opacity: 10;
+  height: 25px;
+  width: 25px;
+  border: 1px solid;
+  border-radius: 50px;
+  margin: 9px 0px 0 0;
+}
+
+.close:hover {
+  background: #A2C3BC;
+  color: #fff;
+}
+
+.startdateform mat-label {
+  font-size: 16px;
+  color: #A2C3BC;
+  text-transform: capitalize;
+  font-weight: 500;
+
+}
+
+.newsave button {
+  background: #2a8594 !important;
+}
+
+.newsave {
+  text-align: center;
+}
+
+.uploadphoto input {
+  width: 50% !important;
+  float: right;
+  padding: 0 !important;
+  margin: 0 0 6px 0;
+  border: none !important;
+}
+
+.photofile {
+  width: 60%;
+  text-align: right;
+  margin-right: 10px;
+  margin: 42px 0px 0 0;
+}
+
+.uploadphoto {
+  display: flex;
+  width: 46%;
+  float: left;
+}
+
+.uploadfile {
+  display: flex;
+  width: 53%;
+  float: right;
+}
+
+.startdateform {
+  margin-top: -7px;
+}
+
+.uploadphoto label {
+  margin: 0 0 0 10px;
+}
+
+.uploadfile label {
+  margin: 0 0 0 10px;
+}
+
+
+
+@media only screen and (max-width:480px) {
+  .uploadphoto {
+    text-align: center;
+  }
+
+  .uploadphoto mat-label {
+    float: none;
+    margin: 0;
+  }
+
+  .uploadphoto input {
+    width: 50%;
+  }
+
+  .uploadfile input {
+    width: 50%;
+  }
+
+}
+
+@media only screen and (max-width:767px) {
+  .prescription h1 {
+    font-size: 15px;
+  }
+
+  .prescription {
+    width: unset;
+    margin: 0 15px;
+  }
+
+  .signfirst input {
+    width: 98%;
+    margin: 3px 0 0 0;
+  }
+
+  .signfirstwarring {
+    display: inherit;
+  }
+
+  .signfirstwarring mat-form-field {
+    width: 100%;
+    margin: 8px 0 0 0;
+    left: 0;
+  }
+
+  .startdate input {
+    margin: -5px 0 0 0 !important;
+  }
+
+  .enddate input {
+    margin: -5px 0 9px 0 !important;
+  }
+
+  .signfirst.numbr input {
+    margin: 6px 0 10px 0 !important;
+  }
+
+  .addtym h1 {
+    margin: 54px 0 20px 0 !important;
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+  .prescription {
+    width: unset;
+    margin: 0 15px;
+  }
+
+  .uploadfile input {
+    width: 39.5%;
+  }
+}
+
+/*-------------------------------------prescription End---------------------------------*/
+mat-form-field {
+  width: 100% !important;
+}
+
+#myFile,
+#doseFile {
+  display: none;
+}
+
+.uploadphoto img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border: 1px solid #dedede;
+}
+
+.uploadfile img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border: 1px solid #dedede;
+}
+
+.quantity-wrapper {
+  display: flex;
+}
+
+.quantity-of-dose {
+  width: 50% !important;
+  margin-right: 10px !important;
+}
+
+.units-wrapper {
+  width: 50%;
+}

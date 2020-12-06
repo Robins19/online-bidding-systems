@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0 !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-drawer-container.mat-drawer-container.example-container {
+    margin: 0;
+}
+.bid-challenge .mat-drawer-inner-container {
+    width: 700px !important;
+}
+.mailinput .mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0;
+}
+.custom-dialog-container mat-dialog-container {
+    padding: 0;
+    overflow: hidden;
+}
+.mailinput .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 5px 0 2px 0 !important;
+}
+.mailinput .mat-form-field-infix {
+    border-top: 0;
+}
+
+.mailinput .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0px !important;
+}

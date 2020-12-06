@@ -1,0 +1,32 @@
+<div class="user-listing-wrapper">
+  <div class="container">
+    <div class="gallery">
+      <div *ngFor="let allChallenge of allChallengeBidList;" (click)="onClickBidItems(allChallenge.status)">
+        <div class="gallery-item">
+          <img class="gallery-image" [src]="allChallenge.images" alt="challenge">
+        </div>
+        <div class="content-wrapper">
+          <div class="heading-name">
+            <div>{{allChallenge.name}}</div>
+          </div>
+          <div class="description-wrapper">
+            <div class="left-items">Status</div>
+            <div class="status-right-content"><span *ngIf="allChallenge.status == bidChallengeStatus.ONGOING"
+                class="ongoing-bid">ongoing</span>
+              <span *ngIf="allChallenge.status == bidChallengeStatus.NOTSTARTED" class="not-started-bid">not
+                started</span>
+              <span *ngIf="allChallenge.status == bidChallengeStatus.ENDED" class="ended-bid">ended</span></div>
+          </div>
+          <div class="description-wrapper">
+            <div class="left-items">Start Date</div>
+            <div>{{allChallenge.startTime | date:'d MMM y'}}</div>
+          </div>
+          <div class="description-wrapper">
+            <div class="left-items">End Date</div>
+            <div class="end-date-right-item">{{allChallenge.endTime | date:'d MMM y'}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div>
+  <div *ngIf="userType == logedInUserRole.ADMIN">
+    <app-admin-bid-listing></app-admin-bid-listing>
+  </div>
+  <div *ngIf="userType == logedInUserRole.USER">
+    <app-user-bid-listing></app-user-bid-listing>
+  </div>
+</div>

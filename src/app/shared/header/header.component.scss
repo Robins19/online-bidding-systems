@@ -1,0 +1,190 @@
+ .menubar p {
+   margin: 8px 0 0 15px;
+ }
+
+ .menubar {
+   background: #288594;
+   display: inline-block;
+   width: 100%;
+   padding: 10px 0;
+   border-bottom: 3px solid #fef3dd;
+   position: fixed;
+   top: 0;
+   z-index: 9;
+ }
+
+ .menuicon {
+   display: flex;
+ }
+
+ .menuicon {
+     outline: none;
+   width: 48%;
+   float: left;
+   padding: 5px 0 3px 20px;
+ }
+
+ .menuicon p {
+   color: #ffffff;
+ }
+
+ .menuicon i {
+   color: #ffffff;
+ }
+
+ .menuicon i {
+   cursor: pointer;
+ }
+
+ .menuicon img {
+   cursor: pointer;
+ }
+
+ .menuicon p {
+   font-size: 18px;
+   font-weight: 500;
+   font-family: 'Bebas Neue';
+ }
+
+
+
+ .logo img {
+   height: 35px;
+ }
+
+ .logo {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   padding: 6px 20px 0 0;
+ }
+
+ .logohead-img {
+   float: right;
+   margin: 5px 0px 0 15px;
+ }
+
+ .logohead-img a {
+   font-size: 18px;
+   font-weight: 500;
+   font-family: 'Bebas Neue';
+ }
+
+ .login {
+   color: #fff;
+   cursor: pointer;
+ }
+
+ .user-image-wrapper {
+   margin: 0 15px 0 15px;
+   cursor: pointer;
+ }
+
+ .user-image {
+   height: 40px !important;
+   width: 40px;
+   border-radius: 50%;
+ }
+
+ .overlay {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 40px;
+   width: 100%;
+   opacity: 0;
+   transition: .5s ease;
+   background-color: #A2C3BC;
+   border-radius: 50px;
+ }
+
+ //   .clientname img {
+ //     height: 40px;
+ //     border-radius: 50px;
+ //     width: 40px;
+ // }
+ .clientname {
+   position: relative;
+   cursor: pointer;
+   height: 40px;
+   outline: none;
+ }
+
+ .clientname:hover .overlay {
+   background: #000000a3;
+   opacity: 1;
+   height: 40px;
+   border-radius: 50px;
+ }
+
+ .clientname:hover img {
+   filter: inherit;
+   height: 40px;
+ }
+
+ .parent-wrapper h2 {
+   font-size: 14px;
+   padding: 6px 15px;
+   color: #ffffff;
+   background-color: #A2C3BC;
+ }
+
+ .closed-cross-button {
+   padding: 6px 15px !important;
+ }
+
+ .parent-wrapper {
+   position: relative;
+ }
+
+ .close-dialog {
+   font-size: 17px;
+ }
+
+ .close-icon {
+   position: absolute;
+   top: 9px;
+   right: 0px;
+   color: #ffffff;
+ }
+
+ .yes {
+   background: #A2C3BC;
+   margin: 0 5px 0 0;
+   color: #fff;
+ }
+
+ .yes:hover {
+   border: 1px solid #A2C3BC;
+   background: transparent;
+   color: #A2C3BC;
+ }
+
+ .no {
+   border: 1px solid #A2C3BC;
+   color: #A2C3BC;
+ }
+
+ .no:hover {
+   border: none;
+   background: #A2C3BC;
+   color: #fff;
+ }
+
+ .noyes {
+   padding: 8px !important;
+   display: flex;
+   justify-content: flex-end;
+ }
+
+ .delete-message {
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   height: 73px;
+   color: #A2C3BC;
+   font-size: 16px;
+ }

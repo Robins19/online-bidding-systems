@@ -1,0 +1,96 @@
+<div class="forms-wrapper">
+  <div class="forms-wrapper__container">
+    <div class="forms-wrapper__container__text">
+      <div class=" "><span>Bid Details</span></div>
+    </div>
+    <div class="add-form-container" *ngIf="itemStatus==bidChallengeStatus.ONGOING" (click)="openBidDialog()">
+      <div class="add-form-button">
+        <div>
+          <div><span class="material-icons">add</span></div>
+        </div>
+        <div class="add-form-button-text">
+          <div><span>Place Bids</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="horizontal-line" />
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+      <!-- department head Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="basePrice">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Base Price</th>
+        <td mat-cell *matCellDef="let element"> {{element.basePrice}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+        <td mat-cell *matCellDef="let element">
+          <span *ngIf="element.status == bidChallengeStatus.ONGOING" class="ongoing-bid">ongoing</span>
+          <span *ngIf="element.status == bidChallengeStatus.NOTSTARTED" class="not-started-bid">not started</span>
+          <span *ngIf="element.status == bidChallengeStatus.ENDED" class="ended-bid">ended</span>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="bidPrice">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Bid Price</th>
+        <td mat-cell *matCellDef="let element"> {{element.bidPrice}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="noRecords">
+        <td mat-footer-cell *matFooterCellDef class="error-message">
+          No records found
+        </td>
+      </ng-container>
+      <tr mat-footer-row
+        *matFooterRowDef=" !dataSource || !dataSource.data || !dataSource.data.length ? ['noRecords'] : []"
+        [ngClass]="{'hide' : dataSource && dataSource.data && dataSource.data.length }"></tr>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[10,20,30]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>
+
+
+<!-- logout modal -->
+
+<ng-template #callAPIDialog>
+  <div class="parent-wrapper">
+    <h2 matDialogTitle class="add-folder-title">Place Bid</h2>
+
+    <mat-dialog-content>
+      <div class="delete-message">
+        <form [formGroup]="bidForm">
+
+          <div class="mailinput">
+            <mat-label class="label">Bid Price</mat-label>
+            <mat-form-field floatLabel="never" appearance="outline">
+              <input type="number" matInput placeholder="Enter bid amount" autocomplete="anyrandomstring"
+                formControlName="bidPrice" autocomplete="off">
+              <mat-error *ngIf="bidForm.controls['bidPrice'].errors?.required">Bid price is
+                required.
+              </mat-error>
+              <mat-error *ngIf="bidForm.controls['bidPrice'].errors?.minValue">Bid price must
+                be greater than base price.
+              </mat-error>
+
+            </mat-form-field>
+          </div>
+        </form>
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end" class="noyes">
+      <button class="yes" mat-button (click)="onSubmitBidForm()">Bid</button>
+      <button class="no" mat-button (click)="onNoClick()">No</button>
+    </mat-dialog-actions>
+  </div>
+</ng-template>

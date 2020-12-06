@@ -1,0 +1,57 @@
+<div class="medic-img">
+  <img src="assets/images/bid-challenge.gif">
+</div>
+<div class="prescription">
+  <div class="newprescptn">
+    <h1>New Challenge</h1>
+    <div class="closemain" (click)="onClosedDrawer()">
+      <div class="close">
+        <span class="material-icons">clear</span>
+      </div>
+    </div>
+  </div>
+  <form [formGroup]="addChallengeForm">
+    <div class="startdateform">
+      <mat-label for="email">Name *</mat-label>
+      <mat-form-field floatLabel="never" appearance="outline">
+        <input matInput formControlName="name">
+        <mat-error *ngIf="addChallengeForm.controls['name'].errors?.required">Name is
+          required.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="startdateform startdate">
+      <mat-label for="email">Start date of Challenge: *</mat-label>
+      <mat-form-field floatLabel="never" appearance="outline">
+        <input matInput (click)="startPerScript.open()" readonly [matDatepicker]="startPerScript"
+          formControlName="startTime" value="" id="startTime">
+        <mat-datepicker-toggle matSuffix [for]="startPerScript"></mat-datepicker-toggle>
+        <mat-datepicker #startPerScript disabled="false"></mat-datepicker>
+        <mat-error *ngIf="addChallengeForm.controls['startTime'].errors?.required">Start date is required.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="startdateform startdate">
+      <mat-label for="email">End Date of challenge: *</mat-label>
+      <mat-form-field floatLabel="never" appearance="outline">
+        <input matInput (click)="endPerScript.open()" readonly [matDatepicker]="endPerScript" value=""
+          formControlName="endTime" id="endTime">
+        <mat-datepicker-toggle matSuffix [for]="endPerScript"></mat-datepicker-toggle>
+        <mat-datepicker #endPerScript disabled="false"></mat-datepicker>
+        <mat-error *ngIf="addChallengeForm.controls['endTime'].errors?.required">End Date is required.
+        </mat-error>
+        <mat-error *ngIf="addChallengeForm.controls['endTime'].errors?.endDate">End Date must be start date.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="save">
+      <div class="newsave">
+        <button id="clickButton" mat-raised-button color="primary" mat type="submit" mat-button (click)="onAddNewBid()">
+          <span>
+            Save
+          </span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="login-container">
+    <div class="login-container-img">
+      <h1>Welcome to
+        <span>SDNA</span>
+      </h1>
+    </div>
+    <div class="login-container-content">
+
+      <div class="login-form-items">
+        <div class="heading-wrapper">
+          Sign In
+        </div>
+        <form (ngSubmit)="onSubmitLoginForm()" [formGroup]="loginForm">
+          <div class="logineml">
+            <div class="mailinput">
+              <mat-label class="label">Email</mat-label>
+              <mat-form-field floatLabel="never" appearance="outline">
+                <input type="text" matInput placeholder="Enter email" autocomplete="anyrandomstring"
+                  formControlName="email" autocomplete="off">
+                <mat-error *ngIf="loginForm.controls['email'].errors?.required">Email is
+                  required.
+                </mat-error>
+                <mat-error *ngIf="loginForm.controls['email'].errors?.email">Please enter a
+                  valid email
+                  address.
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="mailinput">
+              <mat-label class="label">Password</mat-label>
+              <div class="password-wrapper">
+                <mat-form-field floatLabel="never" appearance="outline">
+                  <input [type]="isToggle?'text':'password'" matInput placeholder="Enter password"
+                    autocomplete="new-phone" formControlName="password" autocomplete="off">
+                  <div class="eye-wrapper" (click)="toggleIcon()">
+                    <span class="material-icons password-icon">
+                      remove_red_eye
+                    </span>
+                  </div>
+                  <mat-error *ngIf="loginForm.get('password').hasError('required')">
+                    Password is
+                    required.</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="sign">
+              <button mat-button color="primary" type="submit" [routerLink]="">Sign
+                in</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
